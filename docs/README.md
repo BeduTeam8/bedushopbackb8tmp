@@ -1,0 +1,1 @@
+Here you will find all the planning design and scope documentation for this development sesion.
