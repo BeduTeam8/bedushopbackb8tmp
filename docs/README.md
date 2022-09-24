@@ -22,17 +22,17 @@ Here you will find all the planning design and scope documentation for this deve
 
 Create and config a data basefor the project. **BeduShop**. 
 
-1. ![Diagrama entidad relación con las entidades del proyecto](img/ERD-entitiesRelsTablesDiagram.png)
+1. ![Diagrama entidad relación con las entidades del proyecto](./ERD-entitiesRelsTablesDiagram.png)
 
 2. Pruebas de Conexión
 
-- ![Conexión mediante PgAdmin4 al servidor de heroku](img/screenPgadminHerokuDB.png)
+- ![Conexión mediante PgAdmin4 al servidor de heroku](./screenPgadminHerokuDB.png)
 
-- ![Prueba en Docker](imgscreenPgadminDckrDB.png)
+- ![Prueba en Docker](./screenPgadminDckrDB.png)
 
-- ![Prueba en local](img/screenPgadminLocalDB.png)
+- ![Prueba en local](./screenPgadminLocalDB.png)
 
-3. ![Traducción del modelo relacional que definimos a un esquema de base de datos](img/dbschema.png)
+3. ![Traducción del modelo relacional que definimos a un esquema de base de datos](./dbschema.png)
 
 4. ![Datasets para poblar las bases de datos.](./datasets/entity.csv)
 
