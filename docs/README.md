@@ -12,20 +12,17 @@ Here you will find all the planning design and scope documentation for this deve
 
 ## 🎯 Objetivo
 
-- Explorar y describir las herramientas que se utilizaron durante la sesión de work. 
+- Explorar y describir las herramientas que se utilizaran en el proyecto. 
 - Definir la Arquitectura y requerimientos del proyecto personal.
 
 ## ⚙️ Setup
  - Trello
- - Editor de texto
 
 ### 🫀 Trello
 
-Como se vió en el work, Trello es una herramienta muy útil para la organización y planificación de proyectos de software. Veamos qué otras posibilidades nos ofrece.
-
 **Empieza a colaborar**
 
-Para mejorar la colaboración a nivel de proyecto, Invita a miembros al tablero para asignarles tareas y que puedan colaborar en él. De esta forma tienes la certeza de que todos los miembros del equipo de desarrollo tienen la misma información además de que las actualizaciones se visualizan en tiempo real.
+Invita a miembros al tablero para asignarles tareas y que puedan colaborar en él.
 
 Para poder agregar a los miembros del equipo de desarrollo solo sigue los siguientes pasos:
 
