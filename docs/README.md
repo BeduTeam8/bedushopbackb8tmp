@@ -62,9 +62,6 @@ Para que todo el mundo tenga claro lo que hay que hacer, haz clic en las tarjeta
 3. C**omentarios y actividades**: puedes añadir comentarios a tarjetas al comunicarte y colaborar con miembros del equipo; por ejemplo, para dar feedback o comunicar cambios. Si @mencionas a un miembro del tablero o del equipo en un comentario, le llegará una notificación en Trello. 
 
 ## 🫀 Entregables
-Para esta sesión vas a definir el proyecto personal en el que se estará trabajando todo el módulo. Este proyecto debe ser una aplicación de backend en donde el contenido del proyecto (los datos e información) son a elección del equipo.
-
-Con este proyecto en mente, realizarás un documento en donde se incluyan los siguientes entregables:
 
 1. Los objetivos generales del proyecto están pensados desde un punto de vista de un cliente que le solicita a un equipo de desarrollo la implementación del proyecto, es decir, objetivos no técnicos.
 2. Definir en un tablero en Trello la planificación temporal del proyecto, basándose en la vista en el work. Pues el proceso de desarrollo será muy similar. Agregar un screenshot del tablero al documento. Utilizar también todo el conocimiento nuevo de trello de la sección anterior si es posible. Hay que considerar que la fecha de presentación del proyecto final será en la sesión de Checkpoint
