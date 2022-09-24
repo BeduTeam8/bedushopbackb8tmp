@@ -32,7 +32,10 @@ Para que todo el mundo tenga claro lo que hay que hacer, haz clic en las tarjeta
 
 1. Los objetivos generales del proyecto están pensados desde un punto de vista de un cliente que le solicita a un equipo de desarrollo la implementación del proyecto, es decir, objetivos no técnicos.
 2. Definir en un tablero en Trello la planificación temporal del proyecto, basándose en la vista en el work. Pues el proceso de desarrollo será muy similar. Agregar un screenshot del tablero al documento. Utilizar también todo el conocimiento nuevo de trello de la sección anterior si es posible. Hay que considerar que la fecha de presentación del proyecto final será en la sesión de Checkpoint 
-![](./trello-ProjPlan.png)
+- ![trello Project](./trello-ProjPlan.png)
+
+- https://trello.com/b/SyEmy5H6/planificacion-backend
+
 3. Diagrama de herramientas a utilizar. Mencionar qué son y para qué sirven:
 - PstgreSQL
 - JavaScript
