@@ -42,6 +42,8 @@ Considera que tu proyecto debe cumplir con lo siguiente:
 Requisito:  ||  Sí lo cumple    ✅  ||  	No lo cumple    ❌
 
 ☐ A. Tener una base de datos 		  ✅ 
+
 ☐ B. La base de datos debe tener al menos 3 tablas. 	 ❌	
+
 ☐ C. Cada tabla debe tener al menos 50 registros (en caso de ser posible). 	 ❌
 
