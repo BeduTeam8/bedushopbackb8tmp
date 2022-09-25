@@ -5,7 +5,6 @@ Here you will find all the planning design and scope documentation for this deve
 - Phases & Time Planning
 - Architecture & Tools definition, Tooling
 
-
 [`Backend Fundamentals`](../../README.md) > [`Sesión 02`](../README.md) > `Postwork`
 
 # Postwork S2
@@ -38,12 +37,8 @@ Create and config a data basefor the project. **BeduShop**.
 
 ## 📑 CHECKLIST S2
 
-Considera que tu proyecto debe cumplir con lo siguiente:
-Requisito:  ||  Sí lo cumple    ✅  ||  	No lo cumple    ❌
+☐ A. La aplicación debe de tener usuarios, de preferencia que se incluyan diferentes tipos de usuario con privilegios distintos   ✅
 
-☐ A. Tener una base de datos 		  ✅ 
+☐ B. Se debe considerar que adicionalmente a los usuarios serán necesarias al menos dos entidades (modelos dentro de MVC) más.    ✅	
 
-☐ B. La base de datos debe tener al menos 3 tablas. 	 ❌	
-
-☐ C. Cada tabla debe tener al menos 50 registros (en caso de ser posible). 	 ❌
-
+☐ C. Cada una de las entidades (incluyendo a los usuarios) debe tener características o atributos bien definidos. ✅
