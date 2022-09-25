@@ -8,7 +8,7 @@ Here you will find all the planning design and scope documentation for this deve
 
 [`Backend Fundamentals`](../../README.md) > [`Sesión 01`](../README.md) > `Postwork`
 
-# Postwork
+# Postwork S1 
 
 ## 🎯 Objetivo
 
@@ -65,3 +65,12 @@ Para que todo el mundo tenga claro lo que hay que hacer, haz clic en las tarjeta
 5. Identificación de los modelos del proyecto, cada uno con sus características específicas, dentro de una arquitectura modelo vista controlador. 
 
 ![Identificación de los modelos del proyecto para MVC](./models-def.png)
+
+🗸 CHECKLIST
+
+Considera que tu proyecto debe cumplir con lo siguiente:
+Requisito:  ||  Sí lo cumple    ✅  ||  	No lo cumple    ❌
+
+🗸A. La aplicación debe de tener usuarios, de preferencia que se incluyan diferentes tipos de usuario con privilegios distintos   ✅	
+🗸B. Se debe considerar que adicionalmente a los usuarios serán necesarias al menos dos entidades (modelos dentro de MVC) más.    ✅	
+🗸C. Cada una de las entidades (incluyendo a los usuarios) debe tener características o atributos bien definidos. ✅
