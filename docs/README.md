@@ -17,7 +17,7 @@ Here you will find all the planning design and scope documentation for this deve
 ## ⚙️ Setup
  - PosgreSQL
 
-## S2 Deliverables
+## Deliverables S2
 
 Create and config a data basefor the project. **BeduShop**. 
 
@@ -36,7 +36,7 @@ Create and config a data basefor the project. **BeduShop**.
 
 5. ![Pruebas de consultas a la base de datos.](./queries.sql)    ❌
 
-📑 CHECKLIST
+📑 CHECKLIST S2
 
 Considera que tu proyecto debe cumplir con lo siguiente:
 Requisito:  ||  Sí lo cumple    ✅  ||  	No lo cumple    ❌
