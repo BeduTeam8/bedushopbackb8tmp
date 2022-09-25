@@ -18,7 +18,7 @@
 - pg-hstore
 - pg-native
 
-## Deliverables S3
+## 📑 Deliverables S3
 
 En este momento ya se debe contar con un modelo del proyecto y una base de datos con la información que se usará en la construcción del mismo a lo largo del módulo. 
 
@@ -62,7 +62,7 @@ A continuación, construye la aplicación y conéctala con la base de datos.
 
 4. Prueba la conexión con tu base haciendo las consultas que definiste en el postwork de la sesión 2 a través de sequelize.
 
-📑 CHECKLIST S3
+## 📑 CHECKLIST S3
 
 Considera que tu proyecto debe cumplir con lo siguiente:
 Requisito:  ||  Sí lo cumple    ✅  ||  	No lo cumple    ❌
