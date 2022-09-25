@@ -37,6 +37,8 @@ Para que todo el mundo tenga claro lo que hay que hacer, haz clic en las tarjeta
 - https://trello.com/b/SyEmy5H6/planificacion-backend
 
 3. Diagrama de herramientas a utilizar. Mencionar qué son y para qué sirven:
+- https://app.terrastruct.com/diagrams/2137997413/edit#path=Overview
+
 - PstgreSQL
 - JavaScript
 - Node.js
