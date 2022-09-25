@@ -30,16 +30,17 @@ Create and config a data basefor the project. **BeduShop**.
 - ![Prueba en Docker/Local](./screenPgadminDckrDB.png)
 
 
-3. ![Traducción del modelo relacional que definimos a un esquema de base de datos](./dbschema.png)
+3. ![Traducción del modelo relacional que definimos a un esquema de base de datos](./dbschema.png)   ❌
 
-4. ![Datasets para poblar las bases de datos.](./datasets/entity.csv)
+4. ![Datasets para poblar las bases de datos.](./datasets/entity.csv)   ❌
 
-5. ![Pruebas de consultas a la base de datos.](./queries.sql) 
+5. ![Pruebas de consultas a la base de datos.](./queries.sql)    ❌
 
 📑 CHECKLIST
 
 Considera que tu proyecto debe cumplir con lo siguiente:
 Requisito:  ||  Sí lo cumple    ✅  ||  	No lo cumple    ❌
+
 ☐ A. Tener una base de datos 		  ✅ 
 ☐ B. La base de datos debe tener al menos 3 tablas. 	 ❌	
 ☐ C. Cada tabla debe tener al menos 50 registros (en caso de ser posible). 	 ❌
