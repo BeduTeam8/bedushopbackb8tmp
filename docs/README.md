@@ -18,7 +18,7 @@ Here you will find all the planning design and scope documentation for this deve
 ## ⚙️ Setup
  - Trello
 
-### 🫀 Trello
+### Trello
 
 Para que todo el mundo tenga claro lo que hay que hacer, haz clic en las tarjetas y añade más información, como, por ejemplo:
 - Descripciones
@@ -28,7 +28,7 @@ Para que todo el mundo tenga claro lo que hay que hacer, haz clic en las tarjeta
 - Adjuntos
 - Comentarios
  
-## 🫀 Entregables
+## Entregables
 
 1. Los objetivos generales del proyecto están pensados desde un punto de vista de un cliente que le solicita a un equipo de desarrollo la implementación del proyecto, es decir, objetivos no técnicos.
 
