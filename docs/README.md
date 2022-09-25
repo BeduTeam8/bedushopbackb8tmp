@@ -28,9 +28,8 @@ Create and config a data basefor the project. **BeduShop**.
 
 - ![Conexión mediante PgAdmin4 al servidor de heroku](./screenPgadminHerokuDB.png)
 
-- ![Prueba en Docker](./screenPgadminDckrDB.png)
+- ![Prueba en Docker/Local](./screenPgadminDckrDB.png)
 
-- ![Prueba en local](./screenPgadminLocalDB.png)
 
 3. ![Traducción del modelo relacional que definimos a un esquema de base de datos](./dbschema.png)
 
