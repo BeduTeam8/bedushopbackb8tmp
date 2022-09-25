@@ -8,7 +8,7 @@ Here you will find all the planning design and scope documentation for this deve
 
 [`Backend Fundamentals`](../../README.md) > [`Sesión 02`](../README.md) > `Postwork`
 
-# Postwork
+# Postwork S2
 
 ## 🎯 Objetivo
 
@@ -36,5 +36,11 @@ Create and config a data basefor the project. **BeduShop**.
 
 5. ![Pruebas de consultas a la base de datos.](./queries.sql) 
 
+CHECKLIST
 
+Considera que tu proyecto debe cumplir con lo siguiente:
+Requisito:  ||  Sí lo cumple    ✅  ||  	No lo cumple    ❌
+☐ A. Tener una base de datos 		
+☐ B. La base de datos debe tener al menos 3 tablas. 		
+☐ C. Cada tabla debe tener al menos 50 registros (en caso de ser posible). 	
 
