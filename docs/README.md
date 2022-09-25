@@ -36,11 +36,11 @@ Create and config a data basefor the project. **BeduShop**.
 
 5. ![Pruebas de consultas a la base de datos.](./queries.sql) 
 
-CHECKLIST
+📑 CHECKLIST
 
 Considera que tu proyecto debe cumplir con lo siguiente:
 Requisito:  ||  Sí lo cumple    ✅  ||  	No lo cumple    ❌
-☐ A. Tener una base de datos 		
-☐ B. La base de datos debe tener al menos 3 tablas. 		
-☐ C. Cada tabla debe tener al menos 50 registros (en caso de ser posible). 	
+☐ A. Tener una base de datos 		  ✅ 
+☐ B. La base de datos debe tener al menos 3 tablas. 	 ❌	
+☐ C. Cada tabla debe tener al menos 50 registros (en caso de ser posible). 	 ❌
 
