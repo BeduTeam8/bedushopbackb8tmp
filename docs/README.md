@@ -66,7 +66,7 @@ Para que todo el mundo tenga claro lo que hay que hacer, haz clic en las tarjeta
 
 ![Identificación de los modelos del proyecto para MVC](./models-def.png)
 
-🗸 CHECKLIST
+📑 CHECKLIST
 
 Considera que tu proyecto debe cumplir con lo siguiente:
 Requisito:  ||  Sí lo cumple    ✅  ||  	No lo cumple    ❌
