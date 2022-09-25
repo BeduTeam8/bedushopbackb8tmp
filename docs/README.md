@@ -28,7 +28,7 @@ Para que todo el mundo tenga claro lo que hay que hacer, haz clic en las tarjeta
 - Adjuntos
 - Comentarios
  
-## Deliverables
+## 📑 Deliverables
 
 1. Los objetivos generales del proyecto están pensados desde un punto de vista de un cliente que le solicita a un equipo de desarrollo la implementación del proyecto, es decir, objetivos no técnicos.
 
@@ -66,7 +66,7 @@ Para que todo el mundo tenga claro lo que hay que hacer, haz clic en las tarjeta
 
 ![Identificación de los modelos del proyecto para MVC](./models-def.png)
 
-📑 CHECKLIST
+## 📑 CHECKLIST
 
 Considera que tu proyecto debe cumplir con lo siguiente:
 Requisito:  ||  Sí lo cumple    ✅  ||  	No lo cumple    ❌
