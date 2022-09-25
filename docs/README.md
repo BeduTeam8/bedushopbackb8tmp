@@ -17,8 +17,7 @@ Here you will find all the planning design and scope documentation for this deve
 ## ⚙️ Setup
  - PosgreSQL
 
-## 🫀 Deliverables
-🫀 Entregables
+## S2 Deliverables
 
 Create and config a data basefor the project. **BeduShop**. 
 
