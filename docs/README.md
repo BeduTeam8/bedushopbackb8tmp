@@ -31,11 +31,14 @@ Create and config a data basefor the project. **BeduShop**.
 
 3. ![Traducción del modelo relacional que definimos a un esquema de base de datos](./images/dbschema.png)   ❌
 
-4. ![Datasets para poblar las bases de datos.](./images/datasets/entity.csv)   ❌
+4. ![Datasets para poblar las bases de datos.](./images/datasets/entity.csv) Generated, related and loades to folder.    ✅ DB upload  (not yet) ❌
 
 5. ![Pruebas de consultas a la base de datos.](./queries.sql)    ❌
 
 ## 📑 CHECKLIST S2
+
+Considera que tu proyecto debe cumplir con lo siguiente:
+Requisito:  ||  Sí lo cumple    ✅  ||  	No lo cumple    ❌
 
 ☐ A. La aplicación debe de tener usuarios, de preferencia que se incluyan diferentes tipos de usuario con privilegios distintos   ✅
 
