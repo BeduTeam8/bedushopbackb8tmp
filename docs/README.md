@@ -18,24 +18,46 @@ Here you will find all the planning design and scope documentation for this deve
 
 ## 📑 Deliverables S2
 
-Create and config a data basefor the project. **BeduShop**. 
+Create and config a database for the project. **BeduShop**. 
 
-1. ![Diagrama1 entidad relación con las entidades del proyecto](./images/ERD-dbschema.png) ✅❌
+1.  ERD for the project (first aproach)    ✅
+![Diagrama1 entidad relación con las entidades del proyecto ](./images/ERD-entitiesRelsTablesDiagram.png) 
 
-![Diagrama1 entidad relación con las entidades del proyecto](./images/ERD-entitiesRelsTablesDiagram.png) ✅❌
+ ERD for the project (second aproach)    ✅
+![Diagrama1 entidad relación con las entidades del proyecto](./images/ERD-dbschema.png)
 
-2. Pruebas de Conexión
+2. Conectivity to DB in local docker  ✅ and Heroku dB ✅
 
 - ![Conexión mediante PgAdmin4 al servidor de heroku](./images/screenPgadminHerokuDB.png)
 
 - ![Prueba en Docker/Local](./images/screenPgadminDckrDB.png)
 
 
-3. ![Traducción del modelo relacional que definimos a un esquema de base de datos](./images/dbschema.png)    ✅❌
+3. db Schema used and tested via PGAdmin   ✅
+![Traducción del modelo relacional que definimos a un esquema de base de datos](./images/dbschema.png)   
 
-4. ![Datasets para poblar las bases de datos.](./images/datasets/entity.csv) Generated, related and loades to folder.    ✅ DB upload  (not yet) ❌
+4. Datasets to populate dB. 
+Generated, related and loaded to folder.    ✅  DB upload    ✅
+- ![users dataset](./datasets/users.csv)
+- ![products dataset](./datasets/products.csv)
+- ![categories dataset](./datasets/categories.csv)
+- ![orders dataset](./datasets/orders.csv)
+- ![details dataset](./datasets/-details.csv)
+- ![reviews dataset](./datasets/reviews.csv)
 
-5. ![Pruebas de consultas a la base de datos.](./queries.sql)    ❌
+
+
+5. First Queries to the dB.   ✅ 
+
+SQLScript to create db Table ![SQLScript to create db Tables](./bedushopSQL.sql)
+
+![Pruebas de consultas a la base de datos.](./images/queryUsersTableinHerokuDB.png)
+
+![Pruebas de consultas a la base de datos.](./images/queryCategoriesTable.png)
+
+![Pruebas de consultas a la base de datos.](./images/queryToProductsTablesHerokuDB.png)
+
+![Pruebas de consultas a la base de datos.](./images/queryProductsTableinHerokuDB.png)
 
 ## 📑 CHECKLIST S2
 
