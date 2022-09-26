@@ -45,32 +45,21 @@ A continuación, construye la aplicación y conéctala con la base de datos.
 - pg-hstore
 - pg-native
 
-3. Utilizando las credenciales de Heroku para la base de datos de tu proyecto, define en el archivo app.js la conexión de tu app con la base de datos.  ❌
+3. Utilizando las credenciales de Heroku para la base de datos de tu proyecto, define en el archivo app.js la conexión de tu app con la base de datos.  ✅
 
-```jsx
-    const sequelize = new Sequelize(
-      'database',
-      'username', 
-      'password',
-    {
-      host: 'host',
-      dialect: 'postgres',
-      native: true,
-      ssl: true
-    });
-```
+![dbConnect with Sequelize](./images/dbConnect.png)
 
-4. Prueba la conexión con tu base haciendo las consultas que definiste en el postwork de la sesión 2 a través de sequelize.
+4. Prueba la conexión con tu base haciendo las consultas que definiste en el postwork de la sesión 2 a través de sequelize.   ❌
 
 ## 📑 CHECKLIST S3
 
 Considera que tu proyecto debe cumplir con lo siguiente:
-Requisito:  ||  Sí lo cumple    ✅  ||  	No lo cumple    ❌
+Requisito:  ||  Sí lo cumple    ✅ &check; U+2713 ✅ ✔ ☑ ✓ ||  	No lo cumple  
 
-☐ A. Contener la estructura completa del proyecto hasta el momento,  ✅ junto con la base de datos. 		❌
+☐ A. Tener la estructura completa del proyecto hasta el momento,  ✅  junto con la base de datos.   ✅ 
 
 ☐ B. Dependencias y paquetes instalados.   ✅		
 
-☐ C. Definir la conexión a la base de datos, usando sequelize. 	❌		
+☐ C. Definir la conexión a la base de datos, usando sequelize.   ✅ 
 
 ☐ D. Definir consultas usando los métodos de Sequelize. 		❌
