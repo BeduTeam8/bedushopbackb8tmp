@@ -20,7 +20,9 @@ Here you will find all the planning design and scope documentation for this deve
 
 Create and config a data basefor the project. **BeduShop**. 
 
-1. ![Diagrama entidad relación con las entidades del proyecto](./images/ERD-entitiesRelsTablesDiagram.png) ✅❌
+1. ![Diagrama1 entidad relación con las entidades del proyecto](./images/ERD-dbschema.png) ✅❌
+
+![Diagrama1 entidad relación con las entidades del proyecto](./images/ERD-entitiesRelsTablesDiagram.png) ✅❌
 
 2. Pruebas de Conexión
 
