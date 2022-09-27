@@ -18,17 +18,5 @@
     "pg-hstore": "^2.3.4",
     "pg-native": "^3.0.1",
     "sequelize": "^6.23.1"
-  },
-  "directories": {
-    "doc": "docs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FrankTII/ashopbacktmp.git"
-  },
-  "bugs": {
-    "url": "https://github.com/FrankTII/ashopbacktmp/issues"
-  },
-  "homepage": "https://github.com/FrankTII/ashopbacktmp#readme",
-  "description": ""
+  }
 }
