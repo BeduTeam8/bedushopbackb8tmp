@@ -1,4 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
+const sequelize =require('../config/db');
 
 const Order = sequelize.define('Orders', {
     user_id: {

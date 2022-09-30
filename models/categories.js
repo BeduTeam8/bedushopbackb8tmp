@@ -1,11 +1,12 @@
 const { Sequelize, DataTypes } = require('sequelize');
+const sequelize =require('../config/db');
 
 const Category = sequelize.define('Categories', {
-    category: {
+    Category: {
       type: DataTypes.TEXT
       //FOREIGNKEYS
     },
-    imageCategory_url0: {
+    imagecategory_url0: {
         type: DataTypes.TEXT
     }
 }, {

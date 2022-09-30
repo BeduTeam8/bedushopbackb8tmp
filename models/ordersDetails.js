@@ -1,6 +1,7 @@
 const { Sequelize, DataTypes } = require('sequelize');
+const sequelize =require('../config/db');
 
-const OrderDetail = sequelize.define('order-details', {
+const OrderDetail = sequelize.define('OrdersDetails', {
     order_id: {
       type: DataTypes.INTEGER
       //FOREIGNKEYS
