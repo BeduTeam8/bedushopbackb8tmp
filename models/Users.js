@@ -1,22 +1,29 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
 const User = sequelize.define('Users', {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true
-    },
     first_name: {
-      type: DataTypes.TEXT
+      type: DataTypes.TEXT,
+      allowNull: false,
     },
     last_name: {
-      type: DataTypes.TEXT
+      type: DataTypes.TEXT,
+      allowNull:false
     },
     username: {
-        type: DataTypes.TEXT
+        type: DataTypes.TEXT,
+        allowNull: false,
+        unique: true,
+        validate: {
+            isLowercase: true,
+            is: /^[a-zA-Z0-9_-]+$/
+        }
     },
     email: {
-        type: DataTypes.TEXT
+        type: DataTypes.TEXT,
+        allowNull: false,
+        validate: {
+            isEmail: true
+        }
     },
     gender: {
         type: DataTypes.TEXT
@@ -36,25 +43,33 @@ const User = sequelize.define('Users', {
     country: {
         type: DataTypes.TEXT
     },
-    pasword: {
-        type: DataTypes.TEXT
+    password_hash: {
+        type: DataTypes.CHAR(64),
+        allowNull: true,
+    },
+    password_salt: {
+        type: DataTypes.CHAR(64),
+        allowNull: true,
     },
     user_type:{
-        type: DataTypes.BOOLEAN
-    },
+        type: DataTypes.INTEGER
+        },
     credit_card_type: {
-        type: DataTypes.TEXT
+        type: DataTypes.CHAR(64)
     },
     credit_card: {
-        type: DataTypes.TEXT
+        type: DataTypes.CHAR(64),
+        allowNull: true,
+        validate: {
+            isCreditCard: true
+        }
     },
     phone:{
-        type: DataTypes.TEXT
-    },
-    phone2:{
         type: DataTypes.TEXT
     }
 }, {
     freezeTableName: true,
     timestamps: false
   });
+
+  module.exports = User;

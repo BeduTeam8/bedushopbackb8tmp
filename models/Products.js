@@ -1,12 +1,6 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
-
-const Producto = sequelize.define('Products', {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true
-    },
+const Product = sequelize.define('Products', {
     title: {
         type: DataTypes.TEXT
     },
@@ -32,3 +26,5 @@ const Producto = sequelize.define('Products', {
     freezeTableName: true,
     timestamps: false
   });
+
+  module.exports = Product;
