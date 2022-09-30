@@ -42,6 +42,7 @@ module.exports = {
     deleteUser
 }
 
+//Comentado en Routes
 // async function signUp(req, res) {
 //     const body = req.body;
 //     try { 
