@@ -21,3 +21,6 @@ module.exports = {
     down: () => Promise.resolve(),
 };
 ```
+Se revisaron 2 POST mas POST ORDERS y POST orderDetails. estan funcionando como C, pero no con un id valido auto incremental.
+
+Claro esto no es importante si dejamos una app que genera al iniciar configura un servidor de DB vacio. 
