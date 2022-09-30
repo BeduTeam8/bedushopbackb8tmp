@@ -17,13 +17,24 @@
 
 1. Define la configuración de Express en el archivo app.js de tu proyecto BeduShop.   ✅
 
-2. Verifica que funcione correctamente corriendo tu proyecto y haciendo una petición get a la url base desde insomnia. ❌
+2. Verifica que funcione correctamente corriendo tu proyecto y haciendo una petición get a la url base desde insomnia.  ✅❌
+ SE HICIERON DE 7 TABLAS o ENTIDADES. EMPEZARON A REVISARSE EN DEVELOPER-03
 
-3. Selecciona una de las tablas de la base de datos de tu proyecto y define el CRUD completo para esa entidad. ❌
+3. Selecciona una de las tablas de la base de datos de tu proyecto y define el CRUD completo para esa entidad. ❌  ✅ 
 
-4. Prueba los servicios que realizaste en el inciso anterior. ❌
+SE HICIERON DE 7 TABLAS o ENTIDADES. EMPEZARON A REVISARSE EN DEVELOPER-03
 
-5. Define un nuevo servicio get que sea una búsqueda por id (o el campo de llave primaria de tu tabla). ❌
+
+
+4. Prueba los servicios que realizaste en el inciso anterior. ❌ REVISANDO EN DEVELOPER-03
+GET COMPLETO DE las 7 TABLAS
+GET por ID 
+POST de 2 TABLAS
+PUT
+PATCH
+DELETE
+
+5. Define un nuevo servicio get que sea una búsqueda por id (o el campo de llave primaria de tu tabla). ✅
 
 6. Pruébalo en insomnia. ❌
 
