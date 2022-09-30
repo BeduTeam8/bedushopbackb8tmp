@@ -49,7 +49,14 @@ A continuación, construye la aplicación y conéctala con la base de datos.
 
 ![dbConnect with Sequelize](./images/dbConnect.png)
 
-4. Prueba la conexión con tu base haciendo las consultas que definiste en el postwork de la sesión 2 a través de sequelize.   ❌
+4. Prueba la conexión con tu base haciendo las consultas que definiste en el postwork de la sesión 2 a través de sequelize.    ✅
+
+Insomnia testing Creating UserType
+![Insomnia testing Creating UserType](./images/InsertnewUserType.png)
+Insomnia testing Select From -FindAll UserType
+![Insomnia testing Select From -FindAll UserType](./images/SelectAllFromUserType.png)
+
+
 
 ## 📑 CHECKLIST S3
 
@@ -62,4 +69,4 @@ Requisito:  ||  Sí lo cumple    ✅ &check; U+2713 ✅ ✔ ☑ ✓ ||  	No lo c
 
 ☐ C. Definir la conexión a la base de datos, usando sequelize.   ✅ 
 
-☐ D. Definir consultas usando los métodos de Sequelize. 		❌
+☐ D. Definir consultas usando los métodos de Sequelize. 		 ✅
