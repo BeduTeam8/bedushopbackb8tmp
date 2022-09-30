@@ -1,1 +1,1 @@
-FALTA REVISAR los demas POST. VER patallas en README-S3
+FALTA ejecutar los demas POST (Solo se han revisado 2) PATCH, PUT, DELETE. VER patallas en README-S3
