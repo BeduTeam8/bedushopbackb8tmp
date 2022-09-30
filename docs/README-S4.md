@@ -27,8 +27,8 @@ SE HICIERON DE 7 TABLAS o ENTIDADES. EMPEZARON A REVISARSE EN DEVELOPER-03
 
 
 4. Prueba los servicios que realizaste en el inciso anterior. ❌ REVISANDO EN DEVELOPER-03
-GET COMPLETO DE las 7 TABLAS
-GET por ID 
+GET COMPLETO DE las 7 TABLAS  ✅
+GET por ID de 7 tablas ✅
 POST de 2 TABLAS
 PUT
 PATCH
@@ -36,7 +36,7 @@ DELETE
 
 5. Define un nuevo servicio get que sea una búsqueda por id (o el campo de llave primaria de tu tabla). ✅
 
-6. Pruébalo en insomnia. ❌
+6. Pruébalo en insomnia. ✅ INCLUIR FOTOS
 
 7. Define un servicio que sólo traiga ciertos campos de la tabla, estos campos deben ser seleccionados por el cliente y pasados en la petición. ❌
 
@@ -56,6 +56,6 @@ Requisito:  ||  Sí lo cumple    ✅  ||  	No lo cumple    ❌
 
 ☐ A. Configuración de Express. 		  ✅
 
-☐ B. CRUD de una tabla. 	 ❌	
+☐ B. CRUD de una tabla. 	 ✅	
 
 ☐ C. Servicios con comportamiento más complejo. 	 ❌
