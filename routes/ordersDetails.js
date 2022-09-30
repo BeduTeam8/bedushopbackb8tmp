@@ -5,7 +5,7 @@ const {
     getOrderDetailss,
     updateOrderDetails,
     deleteOrderDetails
-}=require('../controllers/orderDetails');
+}=require('../controllers/ordersDetails');
 
 router.get('/',getOrderDetailss);
 router.get('/:id',getOrderDetails);

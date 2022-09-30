@@ -1,4 +1,4 @@
-const OrderDetails = require('../models/orderDetails');
+const OrderDetails = require('../models/ordersDetails');
 
 function createOrderDetails(req, res) {
     const body = req.body;

@@ -2,7 +2,7 @@ const Review = require('../models/reviews');
 
 function createReview(req, res) {
     const body = req.body;
-    review.create(body).then(Review => {
+    Review.create(body).then(review => {
         res.status(201).json(review);
     });
 }
