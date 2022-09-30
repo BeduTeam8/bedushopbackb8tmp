@@ -1,0 +1,16 @@
+const router=require('express').Router();
+const {
+    createOrderDetails,
+    getOrderDetails,
+    getOrderDetailss,
+    updateOrderDetails,
+    deleteOrderDetails
+}=require('../controllers/orderDetails');
+
+router.get('/',getOrderDetailss);
+router.get('/:id',getOrderDetails);
+router.post('/',createOrderDetails);
+router.patch('/:id',updateOrderDetails);
+router.delete('/:id',deleteOrderDetails);
+
+module.exports=router;
