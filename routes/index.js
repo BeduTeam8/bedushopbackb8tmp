@@ -9,7 +9,13 @@ const users=require('./users');
 const userTypes=require('./userTypes');
 
 router.get('/',(req,res)=>{
-    res.json({'info':'Welcome to Gods Api!'})
+    res.json(
+        {
+        'info':'Welcome to BEDU Shop Back Team B8 API!',
+        'Jesús':'https://github.com/jesuszdp',
+        'Francisco':'https://github.com/FrankTII',
+        'Miguel':'https://github.com/toonchavez8',
+        });
 });
 
 router.use('/categories',categories);

@@ -59,7 +59,7 @@ Insomnia testing Select From -FindAll UserType
 ## 📑 CHECKLIST S3
 
 Considera que tu proyecto debe cumplir con lo siguiente:
-Requisito:  ||  Sí lo cumple    ✅ &check; U+2713 ✅ ✔ ☑ ✓ ||  	No lo cumple  
+Requisito:  ||  Sí lo cumple    ✅ ||  	No lo cumple  ❌
 
 ☐ A. Tener la estructura completa del proyecto hasta el momento,  ✅  junto con la base de datos.   ✅ 
 
@@ -69,6 +69,6 @@ Requisito:  ||  Sí lo cumple    ✅ &check; U+2713 ✅ ✔ ☑ ✓ ||  	No lo c
 
 ☐ D. Definir consultas usando los métodos de Sequelize. 		 ✅
 
-COMO ME SALTE DIRECTO DE LOS MODELOS a LOs ControLES nohay busaquedsa con los metodos nativos de Sequelize: destroy, update, etc. Si da tiempo cambiar las imagenes de arriba de muestra por un codigo que haga eso. PEro si no ya en los controles estan las pruebass de que si sirve.
+COMO ME SALTE DIRECTO DE LOS MODELOS a LOs ControLES no hay busaquedsa con los metodos nativos de Sequelize: destroy, update, etc. Si da tiempo cambiar las imagenes de arriba de muestra por un codigo que haga eso. PEro si no ya en los controles estan las pruebass de que si sirve.
 
 Excepto para busquedas con mas de un filtro a diferentes tablas. Eso tambien se pide en sesion 4 o 5

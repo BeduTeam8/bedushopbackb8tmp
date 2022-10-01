@@ -1,10 +1,13 @@
-FALTA ejecutar los demas POST (Solo se han revisado 2) PATCH, PUT, DELETE. VER patallas en README-S3
+### S3:
 
-POST ORDERS los campos date hsta ahorita se asignan manualmente, pero seria mejor que fuese automatico.
+Se revisaron todos los CRUD y rutas generadas.Funcionan solo con el dato del id que aparecera desconectado en bases de datos que sean alimentadas manualmente o por migrations de sequelize sin actualizar los id's al final de las migraciones. 
 
 Las tablas deben ser creadas desde sequelize y ver si posterior a eso se pueden cargar nuevament desde PGadmin.
 LA pregunta es saber si el id se corrompe o deja de ser automatico despues de este paso.
-En curo caso hay que hacer un create registro (DEl CRUD solo la C) que reciba una lista de jsons separados por coma y cargue todo el servidor y dentro delde node se carguen los registros uno a uno.
+En cuyo caso hay que hacer un create registro (DEl CRUD solo la C) que reciba una lista de jsons separados por coma y cargue todo el servidor y dentro delde node se carguen los registros uno a uno.
+
+Este texto fue antes de investigar sobre migraciones con seguelize.
+
 Hay que hacer un reset manual desde JS con algo parecido a esto:
 
 ```jsx
@@ -21,6 +24,12 @@ module.exports = {
     down: () => Promise.resolve(),
 };
 ```
-Se revisaron 2 POST mas POST ORDERS y POST orderDetails. estan funcionando como C, pero no con un id valido auto incremental.
+Por eso en los create registro POST ejemplos POST ORDERS y POST orderDetails., hay que escribir un id valido en el json , puesto qu un id auto incremental apunta a otro dato, se desfasa.
 
-Claro esto no es importante si dejamos una app que genera al iniciar configura un servidor de DB vacio. 
+POST ORDERS los campos date hsta ahorita se asignan manualmente, pero seria mejor que fuese automatico.
+
+Claro esto no es importante si dejamos una app que genera al iniciar (configura) un servidor de DB vacio. 
+
+### S4
+
+Falta hacer un servicio de datos complejo APi de campos a la eleccion del usuario y contestar las preguntas teoricas. Incluir Fotos
