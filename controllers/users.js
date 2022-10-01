@@ -1,3 +1,5 @@
+//FromS5
+const { Sequelize, DataTypes, Op } = require('sequelize');
 const User = require('../models/users');
 
 function createUser(req, res) {

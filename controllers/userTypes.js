@@ -1,3 +1,5 @@
+//FromS5
+const { Sequelize, DataTypes, Op } = require('sequelize');
 const UserType = require('../models/userTypes');
 
 function createUserType(req, res) {
@@ -21,7 +23,7 @@ async function getUserTypes(req, res) {
 async function updateUserType(req, res) {
     const id = req.params.id;
     const userType = req.body;
-    await UserType.update(userType, {where: {id}});
+    await UserType.update(userType, {where: {id: id}});
     const userType_updated = await UserType.findByPk(id);
     res.status(200).json(userType_updated);
 }
@@ -29,7 +31,7 @@ async function updateUserType(req, res) {
 async function deleteUserType(req, res) {
     const id = req.params.id;
     const deleted = UserType.destroy(
-        {where: {id} }
+        {where: {id: id} }
     );
     res.status(200).json(deleted);
 }

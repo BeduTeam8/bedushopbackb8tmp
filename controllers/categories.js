@@ -1,3 +1,5 @@
+//FromS5
+const { Sequelize, DataTypes, Op } = require('sequelize');
 const Category = require('../models/categories');
 
 function createCategory(req, res) {
@@ -21,7 +23,7 @@ async function getCategories(req, res) {
 async function updateCategory(req, res) {
     const id = req.params.id;
     const category = req.body;
-    await Category.update(category, {where: {id}});
+    await Category.update(category, {where: {id: id}});
     const category_updated = await Category.findByPk(id);
     res.status(200).json(category_updated);
 }
@@ -29,7 +31,7 @@ async function updateCategory(req, res) {
 async function deleteCategory(req, res) {
     const id = req.params.id;
     const deleted = Category.destroy(
-        {where: {id} }
+        {where: {id: id} }
     );
     res.status(200).json(deleted);
 }

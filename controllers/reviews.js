@@ -1,3 +1,5 @@
+//FromS5
+const { Sequelize, DataTypes, Op } = require('sequelize');
 const Review = require('../models/reviews');
 
 function createReview(req, res) {
@@ -21,7 +23,7 @@ async function getReviews(req, res) {
 async function updateReview(req, res) {
     const id = req.params.id;
     const review = req.body;
-    await Review.update(review, {where: {id}});
+    await Review.update(review, {where: {id: id}});
     const review_updated = await Review.findByPk(id);
     res.status(200).json(review_updated);
 }
@@ -29,7 +31,7 @@ async function updateReview(req, res) {
 async function deleteReview(req, res) {
     const id = req.params.id;
     const deleted = Review.destroy(
-        {where: {id} }
+        {where: {id: id} }
     );
     res.status(200).json(deleted);
 }

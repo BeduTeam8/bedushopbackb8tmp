@@ -1,4 +1,4 @@
-const { Sequelize } = require('sequelize');
+const { Sequelize, DataTypes, Op } = require('sequelize');
 
 const dbconnect = require('../env.js');
 

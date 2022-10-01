@@ -33,3 +33,7 @@ Claro esto no es importante si dejamos una app que genera al iniciar (configura)
 ### S4
 
 Falta hacer un servicio de datos complejo APi de campos a la eleccion del usuario y contestar las preguntas teoricas. Incluir Fotos
+
+### S5 
+Faltan 1 foto que prueben que ya usamo /v1/ en los servicios del API 
+Terminar el insomnia con los /v1/

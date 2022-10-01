@@ -1,10 +1,27 @@
+//From s5
+const { Sequelize, DataTypes, Op } = require('sequelize');
+//Carried from dev4
 const express = require('express');
 const sequelize = require('./config/db');
 const routes = require('./routes/index');
 
 const app = express();
 app.use(express.json());
-app.use('/',routes);
+//app.use('/',routes); Dissable S5 part2
+//Session5
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// ESTE ES EL CÓDIGO A AGREGAR
+
+//Configurando las rutas
+app.use('/v1', require('./routes'));
+
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Server listing on PORT ${PORT}`);
+});
 
 try {
     sequelize.authenticate();
@@ -14,7 +31,3 @@ try {
     console.log('Unable to connect to DB:', error);
 }
 
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log("Server listing on PORT 3000");
-});

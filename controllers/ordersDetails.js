@@ -1,3 +1,5 @@
+//FromS5
+const { Sequelize, DataTypes, Op } = require('sequelize');
 const OrderDetails = require('../models/ordersDetails');
 
 function createOrderDetails(req, res) {
@@ -21,7 +23,7 @@ async function getOrderDetailss(req, res) {
 async function updateOrderDetails(req, res) {
     const id = req.params.id;
     const orderDetails = req.body;
-    await OrderDetails.update(orderDetails, {where: {id}});
+    await OrderDetails.update(orderDetails, {where: {id: id}});
     const orderDetails_updated = await OrderDetails.findByPk(id);
     res.status(200).json(orderDetails_updated);
 }
@@ -29,7 +31,7 @@ async function updateOrderDetails(req, res) {
 async function deleteOrderDetails(req, res) {
     const id = req.params.id;
     const deleted = OrderDetails.destroy(
-        {where: {id} }
+        {where: {id: id} }
     );
     res.status(200).json(deleted);
 }
