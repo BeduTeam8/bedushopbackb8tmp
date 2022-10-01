@@ -1,11 +1,7 @@
 {
   "name": "bedushopbackb8tmp",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "start": "node ./app.js",
     "dev": "nodemon ./app.js",
