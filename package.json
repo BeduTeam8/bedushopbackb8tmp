@@ -1,10 +1,18 @@
 {
   "name": "bedushopbackb8tmp",
   "version": "1.0.0",
+<<<<<<< HEAD
+=======
+
+>>>>>>> de8f9ec8fe5fddac764a427c36e10518223e9c51
   "main": "app.js",
   "scripts": {
     "start": "node ./app.js",
     "dev": "nodemon ./app.js",
+<<<<<<< HEAD
+=======
+
+>>>>>>> de8f9ec8fe5fddac764a427c36e10518223e9c51
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
