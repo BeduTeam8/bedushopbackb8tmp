@@ -18,6 +18,7 @@
 
 2. Definir un router para cada una de las entidades del proyecto   ✅
 
+![Diseno de las rutas pata el API Bedushop](DisenoAPIBedushop.html) FALTA AGREGARLE UserTypes: seller, Buyer, Admin, SuperAdmin
 ![](./images/DEVGETbyidAPIRoutes.png)
 
 3. Crear un archivo routers/index.js y agregar la configuración de los routers definidos.  ✅
