@@ -1,5 +1,6 @@
 const router=require('express').Router();
 
+const carts=require('./carts');
 const categories=require('./categories');
 const orders=require('./orders');
 const ordersDetails=require('./ordersDetails');
@@ -18,6 +19,7 @@ router.get('/',(req,res)=>{
         });
 });
 
+router.use('/carts',carts);
 router.use('/categories',categories);
 router.use('/orders',orders);
 router.use('/ordersDetails',ordersDetails);
