@@ -23,9 +23,11 @@
 
 3. Crear un archivo routers/index.js y agregar la configuración de los routers definidos.  ✅
 
-![](./images/routersIndexjs.png)
+![](./images/routesIndex1.png)
 
-4. Agregar la configuración de router al archivo app.js del proyecto para que funcionen los endpoints definidos. Recuerda poner en la url base la versión actual del proyecto v1.  ❌
+4. Agregar la configuración de router al archivo app.js del proyecto para que funcionen los endpoints definidos. Recuerda poner en la url base la versión actual del proyecto v1.  ✅
+
+![](./images/v1.png)
 
 ## 📑 CHECKLIST S5
 

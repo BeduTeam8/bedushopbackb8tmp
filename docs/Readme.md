@@ -1,14 +1,10 @@
-### S3:
+### S3:  ✅
+NOTA: 
+Se revisaron todos los CRUD y rutas generadas.La BD fue cargada con los Datasets de S2 Funcionan los servicios solo que las sequencias de Postgres fueron desconectadas. Se recomienda empezar con una BD limpia y que sequelize lleve la cuenta de los id's.
 
-Se revisaron todos los CRUD y rutas generadas.Funcionan solo con el dato del id que aparecera desconectado en bases de datos que sean alimentadas manualmente o por migrations de sequelize sin actualizar los id's al final de las migraciones. 
+Para corregir se hace con migrations de sequelize actualizando los id's al final de las migraciones. 
 
-Las tablas deben ser creadas desde sequelize y ver si posterior a eso se pueden cargar nuevament desde PGadmin.
-LA pregunta es saber si el id se corrompe o deja de ser automatico despues de este paso.
-En cuyo caso hay que hacer un create registro (DEl CRUD solo la C) que reciba una lista de jsons separados por coma y cargue todo el servidor y dentro delde node se carguen los registros uno a uno.
-
-Este texto fue antes de investigar sobre migraciones con seguelize.
-
-Hay que hacer un reset manual desde JS con algo parecido a esto:
+Hay que hacer un reset manual o actualizacion manual de las sequencias de PG desde JS con algo parecido a esto:
 
 ```jsx
 const tableName = 'YourTable';
@@ -24,16 +20,11 @@ module.exports = {
     down: () => Promise.resolve(),
 };
 ```
-Por eso en los create registro POST ejemplos POST ORDERS y POST orderDetails., hay que escribir un id valido en el json , puesto qu un id auto incremental apunta a otro dato, se desfasa.
-
-POST ORDERS los campos date hsta ahorita se asignan manualmente, pero seria mejor que fuese automatico.
-
-Claro esto no es importante si dejamos una app que genera al iniciar (configura) un servidor de DB vacio. 
-
 ### S4
 
 Falta hacer un servicio de datos complejo APi de campos a la eleccion del usuario y contestar las preguntas teoricas. Incluir Fotos
 
-### S5 
-Faltan 1 foto que prueben que ya usamo /v1/ en los servicios del API 
-Terminar el insomnia con los /v1/
+### S5  ✅
+Generó Cart segun Diseno del APi ![](./DisenoAPIBedushop.html)
+Aun no se bloquean servicios ni cancelan. Se tienen CRUDS completos en todas las entidades.
+### S6 Vamos a S6
