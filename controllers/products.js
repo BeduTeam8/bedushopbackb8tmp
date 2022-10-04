@@ -2,6 +2,18 @@
 const { Sequelize, DataTypes, Op } = require('sequelize');
 const Product = require('../models/products');
 
+// create function
+// http://localhost:3000/products/
+/* {
+	"id": 1,
+	"title": "Sopa",
+	"price": 8.5,
+	"description": "Sopa descripción",
+	"image_url0": "https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:best/gr/images/product-images/img_large/00750101831001L.jpg",
+	"category_id": 2,
+	"updatedAt": "2022-09-30T17:32:44.897Z",
+	"createdAt": "2022-09-30T17:32:44.897Z"
+} */
 function createProduct(req, res) {
     const body = req.body;
     Product.create(body).then(product => {

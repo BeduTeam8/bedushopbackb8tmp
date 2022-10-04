@@ -53,14 +53,15 @@ const User = sequelize.define(
 		},
 		password_salt: {
 			type: DataTypes.TEXT,
-			allowNull: true,
+			allowNull: false,
 		},
 		password_hash: {
 			type: DataTypes.TEXT,
-			allowNull: true,
+			allowNull: false,
 		},
 		user_type: {
 			type: DataTypes.INTEGER,
+        	allowNull: false
 		},
 		credit_card_type: {
 			type: DataTypes.CHAR(64),

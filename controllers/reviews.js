@@ -2,6 +2,14 @@
 const { Sequelize, DataTypes, Op } = require('sequelize');
 const Review = require('../models/reviews');
 
+// create function
+// http://localhost:3000/reviews/
+/* {
+	"review": "Esta bien chida!",
+	"rating": 5,
+	"user_id": 1,
+	"product_id": 3
+} */
 function createReview(req, res) {
     const body = req.body;
     Review.create(body).then(review => {

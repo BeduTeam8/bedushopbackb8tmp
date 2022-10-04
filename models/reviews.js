@@ -5,22 +5,30 @@ const sequelize =require('../config/db');
 
 const Review = sequelize.define('Reviews', {
     review: {
-      type: DataTypes.TEXT
+      type: DataTypes.TEXT('tiny')
     },
     rating: {
-      type: DataTypes.DOUBLE
+      type: DataTypes.DOUBLE,
+        allowNull: false
     },
     user_id: {
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
+        allowNull: false
         //FOREIGNKEYS
     },
     product_id: {
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
+        allowNull: false
         //FOREIGNKEYS
     }
 }, {
     freezeTableName: true,
     timestamps: false
   });
+
+  Review.associate = function(models) {
+    Review.belongsTo(models.User, {foreignKey: 'user_id', as: 'user'});
+    Review.belongsTo(models.Product, {foreignKey: 'product_id', as: 'product'});
+}
 
   module.exports = Review;

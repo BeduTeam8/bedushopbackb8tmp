@@ -2,12 +2,13 @@
 const { Sequelize, DataTypes, Op } = require("sequelize");
 const User = require("../models/users");
 
-function createUser(req, res) {
-	const body = req.body;
-	User.create(body).then((user) => {
-		res.status(201).json(user);
-	});
-}
+//To be erased as it is not required. Only signUp function
+// function createUser(req, res) {
+// 	const body = req.body;
+// 	User.create(body).then((user) => {
+// 		res.status(201).json(user);
+// 	});
+// }
 
 async function getUser(req, res) {
 	const id = req.params.id;
@@ -87,7 +88,7 @@ async function logIn(req, res) {
 }
 
 module.exports = {
-	createUser,
+	// NOT REQUIRED we will use signUp instead of createUser,
 	getUser,
 	getUsers,
 	updateUser,
