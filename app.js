@@ -1,3 +1,6 @@
+//From S8-Environment Vars
+require('dotenv').config({ override: true });
+
 //From s5
 const { Sequelize, DataTypes, Op } = require("sequelize");
 //Carried from dev4
@@ -20,9 +23,8 @@ app.use(auth.optional);
 //Configurando las rutas
 app.use("/v1", require("./routes"));
 
-const PORT = 3000;
-app.listen(PORT, () => {
-	console.log(`Server listing on PORT ${PORT}`);
+app.listen(process.env.PORT||3000, () => {
+    console.log("Server listing on PORT",process.env.PORT);
 });
 
 try {

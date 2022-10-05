@@ -25,5 +25,8 @@
     "pg-native": "^3.0.1",
     "routerjs": "^2.4.5",
     "sequelize": "^6.23.1"
+  },
+  "devDependencies": {
+    "sqlite3": "^5.1.2"
   }
 }
