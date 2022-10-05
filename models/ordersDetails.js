@@ -29,10 +29,15 @@ const OrderDetail = sequelize.define('OrdersDetails', {
     timestamps: false
   });
 //RELATIONS FROM JESUS FILES
-Order.hasMany(Order_detail);
-Order_detail.belongsTo(Order);
 
-Product.hasMany(Order_detail);
-Order_detail.belongsTo(Product);
+Order.associate = function(models) {
+  Order.belongsTo(models.User, {foreignKey: 'user_id', as: 'user'});
+}
+
+Order.hasMany(OrderDetail);
+OrderDetail.belongsTo(Order);
+
+Product.hasMany(OrderDetail);
+OrderDetail.belongsTo(Product);
 
   module.exports = OrderDetail;
