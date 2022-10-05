@@ -6,3 +6,4 @@ envCopy.js
 env
 package-copy.json
 .env
+db.sqlite
