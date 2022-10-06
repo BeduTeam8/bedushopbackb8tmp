@@ -74,6 +74,7 @@ async function logIn(req, res) {
 	) {
 		return res.status(200).json({
 			user: user.username,
+			type: user.user_type,
 			email: user.email,
 			token: User.generateJWT(user),
 		}); // JWT

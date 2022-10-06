@@ -52,21 +52,22 @@ const User = sequelize.define(
 			type: DataTypes.TEXT,
 		},
 		password_salt: {
-			type: DataTypes.TEXT,
+			type: DataTypes.STRING,
 			allowNull: true,
 		},
 		password_hash: {
 			type: DataTypes.TEXT,
 			allowNull: true,
 		},
+		// deberia de apuntar a foreign key de user_type
 		user_type: {
 			type: DataTypes.INTEGER,
 		},
 		credit_card_type: {
-			type: DataTypes.CHAR(64),
+			type: DataTypes.STRING,
 		},
 		credit_card: {
-			type: DataTypes.CHAR(64),
+			type: DataTypes.STRING,
 			allowNull: true,
 			validate: {
 				isCreditCard: true,
@@ -105,6 +106,7 @@ User.generateJWT = function (user) {
 	return jwt.sign(
 		{
 			user: user.username,
+			type: user.user_type,
 			exp: parseInt(exp.getTime() / 1000), // en segundos
 		},
 		secret
