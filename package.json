@@ -24,6 +24,8 @@
     "pg-hstore": "^2.3.4",
     "pg-native": "^3.0.1",
     "routerjs": "^2.4.5",
-    "sequelize": "^6.23.1"
+    "sequelize": "^6.23.1",
+    "swagger-jsdoc": "^6.2.5",
+    "swagger-ui-express": "^4.5.0"
   }
 }
