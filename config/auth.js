@@ -16,6 +16,22 @@ function getTokenFromHeader(req) {
 }
 
 const auth = {
+	// authorize user by user id
+	Userid: function (req, res, next) {
+		// if user id doesnt match user id on route send error
+		if (req.auth.type === 1) {
+			return next();
+		}
+		if (req.auth.id != req.params.id) {
+			return res.status(401).send({
+				error: "you are not authorized to access this route",
+				id: req.auth.id,
+				params: req.params.id,
+			});
+		}
+		next();
+	},
+
 	// authorize user as a Buyer
 	Buyer: function (req, res, next) {
 		if (!req.auth) {

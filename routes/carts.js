@@ -9,10 +9,10 @@ const {
 	deleteCart,
 } = require("../controllers/carts");
 
-router.get("/", getCarts);
-router.get("/:id", getCart);
-router.post("/", createCart);
-router.patch("/:id", updateCart);
-router.delete("/:id", deleteCart);
+router.get("/", auth.admin, getCarts);
+router.get("/:id", auth.Userid, getCart);
+router.post("/", auth.Buyer, createCart);
+router.patch("/:id", auth.Buyer, auth.Userid, updateCart);
+router.delete("/:id", auth.Buyer, auth.Userid, deleteCart);
 
 module.exports = router;

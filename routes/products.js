@@ -13,6 +13,6 @@ router.get("/", getProducts);
 router.get("/:id", getProduct);
 router.post("/", auth.seller, createProduct);
 router.patch("/:id", auth.seller, updateProduct);
-router.delete("/:id", auth.seller, deleteProduct);
+router.delete("/:id", [auth.seller, auth.admin], deleteProduct);
 
 module.exports = router;

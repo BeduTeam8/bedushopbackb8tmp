@@ -2,12 +2,12 @@
 const { Sequelize, DataTypes, Op } = require("sequelize");
 const User = require("../models/users");
 
-function createUser(req, res) {
-	const body = req.body;
-	User.create(body).then((user) => {
-		res.status(201).json(user);
-	});
-}
+// function createUser(req, res) {
+// 	const body = req.body;
+// 	User.create(body).then((user) => {
+// 		res.status(201).json(user);
+// 	});
+// }
 
 async function getUser(req, res) {
 	const id = req.params.id;
@@ -88,7 +88,7 @@ async function logIn(req, res) {
 }
 
 module.exports = {
-	createUser,
+	// createUser,
 	getUser,
 	getUsers,
 	updateUser,
