@@ -2,6 +2,7 @@
 //NewFromS5
 const { Sequelize, DataTypes, Op } = require('sequelize');
 const sequelize =require('../config/db');
+const Category = require('./categories');
 
 const Product = sequelize.define('Products', {
     title: {
@@ -18,10 +19,10 @@ const Product = sequelize.define('Products', {
         type: DataTypes.TEXT('tiny'),
         allowNull: false
     },
-    category_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
+    // category_id: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false
+    // },
     image_url0: {
         type: DataTypes.TEXT
     },
@@ -36,8 +37,17 @@ const Product = sequelize.define('Products', {
     timestamps: false
   });
 
-  Product.associate = function(models) {
-    Product.belongsTo(models.Category, {foreignKey: 'category_id', as: 'category'})
-}
+//   Product.associate = function(models) {
+//     Product.belongsTo(models.Category, {foreignKey: 'category_id', as: 'category'})
+// }
+
+Category.hasMany(Product, {
+	foreignKey: 'category_id',
+	sourceKey: 'id',
+  });
+Product.belongsTo(Category,{
+	foreignKey: "category_id",
+	targetKey: "id",
+  });
 
   module.exports = Product;

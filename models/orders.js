@@ -6,10 +6,10 @@ const sequelize =require('../config/db');
 const User = require("./users");
 
 const Order = sequelize.define('Orders', {
-    user_id: {
-      type: DataTypes.INTEGER,
-        allowNull: false
-    },
+    // user_id: {
+    //   type: DataTypes.INTEGER,
+    //     allowNull: false
+    // },
     order_status: {
       type: DataTypes.TEXT,
       allowNull: false
@@ -20,11 +20,20 @@ const Order = sequelize.define('Orders', {
     }
 }, {
     freezeTableName: true,
-    timestamps: false
+    timestamps: true
   });
 
-  Order.associate = function(models) {
-    Order.belongsTo(models.User, {foreignKey: 'user_id', as: 'user'});
-}
+//   Order.associate = function(models) {
+//     Order.belongsTo(models.User, {foreignKey: 'user_id', as: 'user'});
+// }
+//FKrels between Tables
+User.hasMany(Order, {
+  foreignKey: 'user_id',
+  sourceKey: 'id',
+});
+Order.belongsTo(User,{
+  foreignKey: "user_id",
+  targetKey: "id",
+});
 
   module.exports = Order;

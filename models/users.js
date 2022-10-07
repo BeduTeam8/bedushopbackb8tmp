@@ -5,6 +5,7 @@ const sequelize = require("../config/db");
 const crypto = require("crypto");
 const jwt = require("jsonwebtoken");
 const secret = require("../config/secret");
+const UserType = require("./userTypes");
 
 const User = sequelize.define(
 	"Users",
@@ -61,7 +62,13 @@ const User = sequelize.define(
 		},
 		user_type: {
 			type: DataTypes.INTEGER,
-        	allowNull: false
+			// references:{
+			// 	model: UserType,
+			// 	key: 'id',
+			// 	deferrable: 'Deferrable.INITIALLY_DEFERRED'
+			// },
+        	allowNull: false,
+			defaultValue: 1 //1=Buyer 
 		},
 		credit_card_type: {
 			type: DataTypes.CHAR(64),
@@ -111,5 +118,15 @@ User.generateJWT = function (user) {
 		secret
 	);
 };
+
+//FKrels between Tables
+UserType.hasMany(User, {
+	foreignKey: 'user_type',
+	sourceKey: 'id',
+  });
+User.belongsTo(UserType,{
+	foreignKey: "user_type",
+	targetKey: "id",
+  });
 
 module.exports = User;

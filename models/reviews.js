@@ -2,6 +2,8 @@
 //NewFromS5
 const { Sequelize, DataTypes, Op } = require('sequelize');
 const sequelize =require('../config/db');
+const Product = require('./products');
+const User = require('./users');
 
 const Review = sequelize.define('Reviews', {
     review: {
@@ -26,9 +28,23 @@ const Review = sequelize.define('Reviews', {
     timestamps: false
   });
 
-  Review.associate = function(models) {
-    Review.belongsTo(models.User, {foreignKey: 'user_id', as: 'user'});
-    Review.belongsTo(models.Product, {foreignKey: 'product_id', as: 'product'});
-}
+  User.hasMany(Review, {
+    foreignKey: 'user_id',
+    sourceKey: 'id',
+  });
+  Review.belongsTo(User,{
+    foreignKey: "user_id",
+    targetKey: "id",
+  });
+  
+  Product.hasMany(Review,{
+    foreignKey: 'product_id',
+    sourceKey: 'id'
+  });
+  Review.belongsTo(Product,{
+    foreignKey: "product_id",
+    targetKey: "id",
+  });
+  
 
-  module.exports = Review;
+module.exports = Review;

@@ -7,15 +7,16 @@ const Product = require("./products");
 const Order = require("./orders");
 
 const OrderDetail = sequelize.define('OrdersDetails', {
-    order_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-      //FOREIGNKEYS
-    },
-    product_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
+    // order_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false
+    //   //FOREIGNKEYS
+    // },
+    // product_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false
+    // },
+
     order_price: {
       type: DataTypes.DOUBLE,
       allowNull: false
@@ -26,18 +27,31 @@ const OrderDetail = sequelize.define('OrdersDetails', {
     }
 }, {
     freezeTableName: true,
-    timestamps: false
+    timestamps: true
   });
 //RELATIONS FROM JESUS FILES
 
-Order.associate = function(models) {
-  Order.belongsTo(models.User, {foreignKey: 'user_id', as: 'user'});
-}
+// Order.associate = function(models) {
+//   Order.belongsTo(models.User, {foreignKey: 'user_id', as: 'user'});
+//   Order.belongsTo(models.Product, {foreignKey: 'product_id', as: 'product'});
+// }
 
-Order.hasMany(OrderDetail);
-OrderDetail.belongsTo(Order);
+Order.hasMany(OrderDetail, {
+  foreignKey: 'order_id',
+  sourceKey: 'id',
+});
+OrderDetail.belongsTo(Order,{
+  foreignKey: "order_id",
+  targetKey: "id",
+});
 
-Product.hasMany(OrderDetail);
-OrderDetail.belongsTo(Product);
+Product.hasMany(OrderDetail,{
+  foreignKey: 'product_id',
+  sourceKey: 'id'
+});
+OrderDetail.belongsTo(Product,{
+  foreignKey: "product_id",
+  targetKey: "id",
+});
 
-  module.exports = OrderDetail;
+module.exports = OrderDetail;

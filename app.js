@@ -29,6 +29,7 @@ app.listen(process.env.PORT||3000, () => {
 
 try {
 	sequelize.authenticate();
+	// sequelize.sync({ force: true });
 	sequelize.sync();
 	console.log("Connected to DB");
 } catch (error) {
