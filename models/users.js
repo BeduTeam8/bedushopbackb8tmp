@@ -30,48 +30,51 @@ const User = sequelize.define(
 		email: {
 			type: DataTypes.TEXT,
 			allowNull: false,
+			unique: true,
 			validate: {
 				isEmail: true,
 			},
 		},
 		gender: {
 			type: DataTypes.TEXT,
+			allowNull: true,
 		},
 		street: {
 			type: DataTypes.TEXT,
+			allowNull: true,
 		},
 		city: {
 			type: DataTypes.TEXT,
+			allowNull: true,
 		},
 		zip_code: {
 			type: DataTypes.CHAR(5),
+			allowNull: true,
 		},
 		state: {
 			type: DataTypes.TEXT,
+			allowNull: true,
 		},
 		country: {
 			type: DataTypes.TEXT,
+			allowNull: true,//Do not touch
 		},
 		password_salt: {
 			type: DataTypes.TEXT,
-			allowNull: false,
+			allowNull: true,
 		},
 		password_hash: {
 			type: DataTypes.TEXT,
-			allowNull: false,
+			allowNull: true,//Do not touch
 		},
 		user_type: {
 			type: DataTypes.INTEGER,
-			// references:{
-			// 	model: UserType,
-			// 	key: 'id',
-			// 	deferrable: 'Deferrable.INITIALLY_DEFERRED'
-			// },
         	allowNull: false,
-			defaultValue: 1 //1=Buyer 
+			defaultValue: 2 //2=Buyer, 1=admin, 3=Seller 
 		},
 		credit_card_type: {
 			type: DataTypes.CHAR(64),
+			allowNull: true,
 		},
 		credit_card: {
 			type: DataTypes.CHAR(64),
@@ -82,6 +85,7 @@ const User = sequelize.define(
 		},
 		phone: {
 			type: DataTypes.TEXT,
+			allowNull: true,
 		},
 	},
 	{
