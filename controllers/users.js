@@ -65,8 +65,8 @@ async function signUp(req, res) {
 	*/
 	//DO NOT remove fatal error ir removed.
 	
-	if (!body['username']||!body['password']) {
-		return res.status(400).json({ error: "Username AND/OR Email,password, undefined or empty" });
+	if (!body['username']||!body['password']||!body['credit_card']) {
+		return res.status(400).json({ error: "Username AND/OR Email,password,credit_card, undefined or empty" });
 	}
 		
 	//Validation of Datatypes
@@ -93,6 +93,13 @@ async function signUp(req, res) {
 		const { salt, hash } = User.createPassword(body["password"]);
 		user.password_salt = salt;
 		user.password_hash = hash;
+		//JESUS CARD
+		const card = User.hashCard(body['credit_card'], salt);
+        console.log("credit_card:",body['credit_card']);
+        console.log("salt:",salt);
+        console.log("card:",card);
+        user.credit_card = card;
+		//FIN CARD
 		await user.save();
 		res.status(201).json(user);
 	} catch (err) {

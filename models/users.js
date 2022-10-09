@@ -85,10 +85,7 @@ const User = sequelize.define(
 		},
 		credit_card: {
 			type: DataTypes.TEXT,
-			allowNull: true,
-			validate: {
-				isCreditCard: true,
-			},
+			allowNull: true
 		},
 		phone: {
 			type: DataTypes.TEXT,
@@ -108,6 +105,23 @@ User.createPassword = function (plainText) {
 		.toString("hex");
 	return { salt: salt, hash: hash };
 };
+
+
+//JESUS CARD
+User.hashCard = function(plainText, salt) {
+    try {
+        //const salt = crypto.randomBytes(16).toString('hex');
+        const card = crypto
+            .pbkdf2Sync(plainText, salt, 10000, 512, "sha512")
+            .toString("hex");
+        return card.concat(plainText.slice(-4)); ///Se añaden 4 últimos valores
+    } catch (err) {
+        return res.status(400).json({
+            error: err.errors.map(e => e.message)
+        });
+    }
+}
+//FIN
 
 User.validatePassword = function (password, user_salt, user_hash) {
 	const hash = crypto
