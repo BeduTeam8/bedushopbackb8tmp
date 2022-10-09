@@ -1,7 +1,16 @@
 node_modules/
 env.sh
 env.js
+.envConnect
+envCopy.js
 env
-.env
 package-copy.json
+.env
+db.sqlite
+#Seeding config with sequelize
+seeders/
+config/config.json
+config/config.js
+migrations/
+models/index.js
 ~*

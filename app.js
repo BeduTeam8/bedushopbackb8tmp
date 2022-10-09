@@ -1,3 +1,6 @@
+//From S8-Environment Vars
+require('dotenv').config({ override: true });
+
 //From s5
 const { Sequelize, DataTypes, Op } = require("sequelize");
 //Carried from dev4
@@ -11,6 +14,7 @@ app.use(express.json());
 //Session5
 const auth = require("./config/auth");
 const bodyParser = require("body-parser");
+const UserType = require('./models/userTypes');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(auth.optional);
@@ -36,14 +40,15 @@ app.use(
 //Configurando las rutas
 app.use("/v1", require("./routes"));
 
-const PORT = 3000;
-app.listen(PORT, () => {
-	console.log(`Server listing on PORT ${PORT}`);
+app.listen(process.env.PORT||3000, () => {
+    console.log("Server listing on PORT",process.env.PORT);
 });
 
 try {
 	sequelize.authenticate();
 	sequelize.sync();
+	//RESET DB remove on PROD
+	//sequelize.sync({force:true});//RESET DB remove on PROD
 	console.log("Connected to DB");
 } catch (error) {
 	console.log("Unable to connect to DB:", error);

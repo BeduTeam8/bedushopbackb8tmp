@@ -4,7 +4,7 @@ const swaggerOptions = {
 		info: {
 			title: "BeduShop API",
 			description: "Welcome to BEDU Shop Back Team B8 API! test",
-			servers: ["http://localhost:3000/v1"],
+			servers: ["http://localhost:5000/v1"],
 		},
 		openapi: "3.0.3",
 		components: {

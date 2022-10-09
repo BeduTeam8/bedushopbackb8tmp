@@ -25,3 +25,5 @@ Yo uso este porque mi docker asi se llama.
 docker inspect postgres 
 ```
 ![](./dockernetworksettings.pngdockernetworksettings.png)
+____
+https://9to5answer.com/how-to-delete-rows-of-data-using-sequelize

@@ -1,21 +1,23 @@
-//const { Sequelize, DataTypes } = require('sequelize');
-//NewFromS5
 const { Sequelize, DataTypes, Op } = require("sequelize");
 const sequelize = require("../config/db");
 const crypto = require("crypto");
 const jwt = require("jsonwebtoken");
 const secret = require("../config/secret");
+const UserType = require("./userTypes");
 
 const User = sequelize.define(
 	"Users",
 	{
 		first_name: {
 			type: DataTypes.TEXT,
-			allowNull: false,
+			/*Change false and uncomment validation code in controllers mmodule. 
+			* CascadeDrop table  Users and restart server.
+			* allowNull: true, 
+			*/
 		},
 		last_name: {
 			type: DataTypes.TEXT,
-			allowNull: false,
+			allowNull: true,
 		},
 		username: {
 			type: DataTypes.TEXT,
@@ -28,28 +30,41 @@ const User = sequelize.define(
 		},
 		email: {
 			type: DataTypes.TEXT,
-			allowNull: false,
+			allowNull: true,
+			unique: true,
 			validate: {
 				isEmail: true,
 			},
 		},
 		gender: {
 			type: DataTypes.TEXT,
+			allowNull: true,
 		},
 		street: {
 			type: DataTypes.TEXT,
+			allowNull: true,
 		},
 		city: {
 			type: DataTypes.TEXT,
+			allowNull: true,
 		},
 		zip_code: {
-			type: DataTypes.CHAR(5),
+			type: DataTypes.TEXT,
+			/* Early CHAR(5), We do not know the zip
+			 codes in other parts of the world and in 
+			 case y we input more than 5 characters 
+			 server crashes. So we change to TEXT 
+			 Datatype
+			 */
+			allowNull: true,
 		},
 		state: {
 			type: DataTypes.TEXT,
+			allowNull: true,
 		},
 		country: {
 			type: DataTypes.TEXT,
+			allowNull: true,//Do not touch
 		},
 		password_salt: {
 			type: DataTypes.STRING,
@@ -57,24 +72,25 @@ const User = sequelize.define(
 		},
 		password_hash: {
 			type: DataTypes.TEXT,
-			allowNull: true,
+			allowNull: true,//Do not touch
 		},
 		// deberia de apuntar a foreign key de user_type
 		user_type: {
 			type: DataTypes.INTEGER,
+        	allowNull: false,
+			defaultValue: 2 //2=Buyer, 1=admin, 3=Seller 
 		},
 		credit_card_type: {
-			type: DataTypes.STRING,
+			type: DataTypes.TEXT,
+			allowNull: true,
 		},
 		credit_card: {
-			type: DataTypes.STRING,
-			allowNull: true,
-			validate: {
-				isCreditCard: true,
-			},
+			type: DataTypes.TEXT,
+			allowNull: true
 		},
 		phone: {
 			type: DataTypes.TEXT,
+			allowNull: true,
 		},
 	},
 	{
@@ -90,6 +106,23 @@ User.createPassword = function (plainText) {
 		.toString("hex");
 	return { salt: salt, hash: hash };
 };
+
+
+//JESUS CARD
+User.hashCard = function(plainText, salt) {
+    try {
+        //const salt = crypto.randomBytes(16).toString('hex');
+        const card = crypto
+            .pbkdf2Sync(plainText, salt, 10000, 512, "sha512")
+            .toString("hex");
+        return card.concat(plainText.slice(-4)); ///Se añaden 4 últimos valores
+    } catch (err) {
+        return res.status(400).json({
+            error: err.errors.map(e => e.message)
+        });
+    }
+}
+//FIN
 
 User.validatePassword = function (password, user_salt, user_hash) {
 	const hash = crypto
@@ -112,5 +145,15 @@ User.generateJWT = function (user) {
 		secret
 	);
 };
+
+//FKrels between Tables
+UserType.hasMany(User, {
+	foreignKey: 'user_type',
+	sourceKey: 'id',
+  });
+User.belongsTo(UserType,{
+	foreignKey: "user_type",
+	targetKey: "id",
+  });
 
 module.exports = User;

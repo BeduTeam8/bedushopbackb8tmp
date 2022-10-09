@@ -18,10 +18,19 @@
 ```
 npm install crypto jsonwebtoken passport passport-local express-jwt
 ```
+![package.json](../package.json)
 
-2. De todos los datos presentes en tu base de datos identifica aquellos que sean sensibles o que no deberían ser guardados de forma plana. ❌
-3. Utilizando la investigación realizada en el prework de la sesión elige cuál es el mejor método para proteger estos datos. ❌
-4. Utiliza la biblioteca crypto para proteger los datos sensibles de la base de datos. ✅
+FOTO DEL PACKAGE.JSON
+
+2. De todos los datos presentes en tu base de datos identifica aquellos que sean sensibles o que no deberían ser guardados de forma plana.  ❌
+
+        password y tarjetas de credito 
+
+    Y posiblemente el username si no queremos que sea mas dificil si robarán la base de datos. En una nuevo sprint sería tomado por el equipo de desarrollo.
+
+3. Utilizando la investigación realizada en el prework de la sesión elige cuál es el mejor método para proteger estos datos.  ❌
+
+4. Utiliza la biblioteca crypto para proteger los datos sensibles de la base de datos.  ❌
 
 ## 📑 CHECKLIST S6
 
