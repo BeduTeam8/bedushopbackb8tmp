@@ -1,40 +1,42 @@
-//const { Sequelize, DataTypes } = require('sequelize');
-//NewFromS5
 const { Sequelize, DataTypes, Op } = require('sequelize');
 const sequelize =require('../config/db');
 const Product = require('./products');
 const User = require('./users');
 
 const Cart = sequelize.define('Carts', {
-    // product_id: {
-    //   type: DataTypes.INTEGER
-    // //FOREIGNKEYS
-    // },
-    // user_id: {
-    //   type: DataTypes.INTEGER
-    //   //FOREIGNKEYS
-    // },
-    date: {
-      type: DataTypes.DATE
+    product_id: {
+      type: DataTypes.INTEGER,
+      allowNull:false,
+      //FOREIGNKEYS
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull:false,
+      //FOREIGNKEYS
+    },
+    // date: {
+    //   type: DataTypes.DATE,allowNull:false
+    // },
     quantity: {
-      type: DataTypes.DOUBLE
+      type: DataTypes.DOUBLE,
+      allowNull:false,
+      validate:{
+        isNumeric:true
+      }
     },
     price: {
-      type: DataTypes.DOUBLE
+      type: DataTypes.DOUBLE,
+      allowNull:false,
+      validate:{
+        isFloat:true
+      }
     }
 }, {
     freezeTableName: true,
     timestamps: true
   });
 
-//FK REls between tables
-// Cart.associate = function(models) {    
-//   Cart.belongsTo(models.User, {foreignKey: 'user_id', as: 'user'});
-//   Cart.belongsTo(models.Product, {foreignKey: 'product_id', as: 'product'});
-// }
-
-
+//FKrels between Tables
 User.hasMany(Cart, {
   foreignKey: 'user_id',
   sourceKey: 'id',

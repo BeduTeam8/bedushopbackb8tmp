@@ -2,18 +2,6 @@
 const { Sequelize, DataTypes, Op } = require("sequelize");
 const User = require("../models/users");
 
-/*EREASE BEFORE DEPLOYMENT 
-To be erased as it is not required. 
-Only signUp function should create new Users
-function createUser(req, res) {
-	const body = req.body;
-	User.create(body).then((user) => {
-		res.status(201).json(user);
-	});
-}
-*/
-
-
 /*No validation required
 * Returns Empty Brackets{} in case or a query where id to table returns empty.
 * 				Brackets{id record in table}
@@ -37,10 +25,10 @@ async function getUsers(req, res) {
 async function updateUser(req, res) {
 	const id = req.params.id;
 	try{
-	const user = req.body;
-	await User.update(user, { where: { id: id } });
-	const user_updated = await User.findByPk(id);
-	res.status(200).json(user_updated);
+		const user = req.body;
+		await User.update(user, { where: { id: id } });
+		const user_updated = await User.findByPk(id);
+		res.status(200).json(user_updated);
 	} catch (err) {
 		if (
 			["SequelizeValidationError", "SequelizeUniqueConstraintError"].includes(
@@ -56,37 +44,31 @@ async function updateUser(req, res) {
 	}
 }
 
-async function deleteUser(req, res) {
-	const id = req.params.id;
 /*No validation performed, if userExists, if id exists in DB
 * Either way the DB returna 200 Error Code
 * Only if a GetAll or GetById call return if user exists
 */
+async function deleteUser(req, res) {
+	const id = req.params.id;
 	const deleted = User.destroy({ where: { id: id } });
 	res.status(200).json(deleted);
 }
 
-
-//Comentado en Routes
+//Function to REgister new Users
 async function signUp(req, res) {
 	const body = req.body;
-
 	
 	//Required field for a minimal SignUp 
-		if (!body['first_name']||!body['last_name']) {
+	/*	if (!body['first_name']||!body['last_name']) {
 		return res.status(400).json({ error: "First Name AND/OR Last Name fields, undefined ot empty" });
 	}
-	
-	if (!body['username']||body['email']===undefined) {
-		return res.status(400).json({ error: "Username AND/OR Email, undefined ot empty" });
-	}
-	/*DO NOT remove fatal error ir removed.
-	* Phase2 dev-point. 
 	*/
-	if (!body['password']) {
-		return res.status(400).json({ error: "Empty Password, password field cannot be empty" });
-	}
+	//DO NOT remove fatal error ir removed.
 	
+	if (!body['username']||!body['password']) {
+		return res.status(400).json({ error: "Username AND/OR Email,password, undefined or empty" });
+	}
+		
 	//Validation of Datatypes
 	//Special Validation on Server, not DB
 	
@@ -132,8 +114,8 @@ async function logIn(req, res) {
 	const body = req.body;
 //Required field for Login, Json structure with 2 attributes required not less. 
 
-	if (!body['username']||body['email']===undefined) {
-		return res.status(400).json({ error: "Username AND/OR Email, undefined ot empty, check proper Attribute naming AND/ORconventions" });
+	if (!body['username']||!body['password']) {
+		return res.status(400).json({ error: "Username AND/OR Password, undefined ot empty, check proper Attribute naming AND/ORconventions" });
 	}
 
 	const user = await User.findOne({ where: { username: body["username"] } });
@@ -149,7 +131,9 @@ async function logIn(req, res) {
 	) {
 		return res.status(200).json({
 			user: user.username,
-			email: user.email,
+			//Lo dejamos para evaluacio temporal
+			email: user.email, 
+			//Porque regresar email. 
 			token: User.generateJWT(user),
 		}); // JWT
 	} else {
@@ -162,7 +146,6 @@ async function logIn(req, res) {
 }
 
 module.exports = {
-	// NOT REQUIRED we will use signUp instead of createUser,
 	getUser,
 	getUsers,
 	updateUser,

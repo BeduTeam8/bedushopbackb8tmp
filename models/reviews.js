@@ -1,5 +1,3 @@
-//const { Sequelize, DataTypes } = require('sequelize');
-//NewFromS5
 const { Sequelize, DataTypes, Op } = require('sequelize');
 const sequelize =require('../config/db');
 const Product = require('./products');
@@ -7,11 +5,13 @@ const User = require('./users');
 
 const Review = sequelize.define('Reviews', {
     review: {
-      type: DataTypes.TEXT('tiny')
+      type: DataTypes.TEXT('tiny'),
+        allowNull:true
     },
     rating: {
       type: DataTypes.DOUBLE,
-        allowNull: false
+        allowNull: false,
+			  defaultValue: 0 // 5/2=2.5 NEUTRAL Answer ,5 All right,0 NOTHING
     },
     user_id: {
         type: DataTypes.INTEGER,
@@ -28,6 +28,7 @@ const Review = sequelize.define('Reviews', {
     timestamps: false
   });
 
+  //FKrels between Tables
   User.hasMany(Review, {
     foreignKey: 'user_id',
     sourceKey: 'id',

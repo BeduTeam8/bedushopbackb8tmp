@@ -1,15 +1,13 @@
-//const { Sequelize, DataTypes } = require('sequelize');
-//NewFromS5
 const { Sequelize, DataTypes, Op } = require('sequelize');
 const sequelize =require('../config/db');
-//FK DEC and RELS BOTTOM
 const User = require("./users");
 
 const Order = sequelize.define('Orders', {
-    // user_id: {
-    //   type: DataTypes.INTEGER,
-    //     allowNull: false
-    // },
+    user_id: {
+      type: DataTypes.INTEGER,
+        allowNull: false
+        //FOREIGNKEYS
+    },
     order_status: {
       type: DataTypes.TEXT,
       allowNull: false
@@ -23,9 +21,6 @@ const Order = sequelize.define('Orders', {
     timestamps: true
   });
 
-//   Order.associate = function(models) {
-//     Order.belongsTo(models.User, {foreignKey: 'user_id', as: 'user'});
-// }
 //FKrels between Tables
 User.hasMany(Order, {
   foreignKey: 'user_id',

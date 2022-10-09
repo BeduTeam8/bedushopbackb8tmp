@@ -1,14 +1,18 @@
-//const { Sequelize, DataTypes } = require('sequelize');
-//NewFromS5
 const { Sequelize, DataTypes, Op } = require('sequelize');
 const sequelize =require('../config/db');
 
 const Category = sequelize.define('Categories', {
-    Category: {
-      type: DataTypes.TEXT
+    category: {
+      type: DataTypes.TEXT,
+      unique:true,
+      allowNull:false
     },
     imagecategory_url0: {
-        type: DataTypes.TEXT
+        type: DataTypes.TEXT,
+        allowNull:true,
+        validate:{
+          isUrl:true
+        }
     }
 }, {
     freezeTableName: true,

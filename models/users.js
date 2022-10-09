@@ -1,5 +1,3 @@
-//const { Sequelize, DataTypes } = require('sequelize');
-//NewFromS5
 const { Sequelize, DataTypes, Op } = require("sequelize");
 const sequelize = require("../config/db");
 const crypto = require("crypto");
@@ -12,11 +10,14 @@ const User = sequelize.define(
 	{
 		first_name: {
 			type: DataTypes.TEXT,
-			allowNull: false,
+			/*Change false and uncomment validation code in controllers mmodule. 
+			* CascadeDrop table  Users and restart server.
+			* allowNull: true, 
+			*/
 		},
 		last_name: {
 			type: DataTypes.TEXT,
-			allowNull: false,
+			allowNull: true,
 		},
 		username: {
 			type: DataTypes.TEXT,
@@ -29,7 +30,7 @@ const User = sequelize.define(
 		},
 		email: {
 			type: DataTypes.TEXT,
-			allowNull: false,
+			allowNull: true,
 			unique: true,
 			validate: {
 				isEmail: true,
@@ -48,7 +49,13 @@ const User = sequelize.define(
 			allowNull: true,
 		},
 		zip_code: {
-			type: DataTypes.CHAR(5),
+			type: DataTypes.TEXT,
+			/* Early CHAR(5), We do not know the zip
+			 codes in other parts of the world and in 
+			 case y we input more than 5 characters 
+			 server crashes. So we change to TEXT 
+			 Datatype
+			 */
 			allowNull: true,
 		},
 		state: {
@@ -73,11 +80,11 @@ const User = sequelize.define(
 			defaultValue: 2 //2=Buyer, 1=admin, 3=Seller 
 		},
 		credit_card_type: {
-			type: DataTypes.CHAR(64),
+			type: DataTypes.TEXT,
 			allowNull: true,
 		},
 		credit_card: {
-			type: DataTypes.CHAR(64),
+			type: DataTypes.TEXT,
 			allowNull: true,
 			validate: {
 				isCreditCard: true,

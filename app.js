@@ -29,8 +29,8 @@ app.listen(process.env.PORT||3000, () => {
 
 try {
 	sequelize.authenticate();
-	// sequelize.sync({ force: true });
 	sequelize.sync();
+	//sequelize.sync({force:true});RESET DB remove on PROD
 	console.log("Connected to DB");
 } catch (error) {
 	console.log("Unable to connect to DB:", error);
