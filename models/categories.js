@@ -6,7 +6,7 @@ const sequelize = require("../config/db");
 const Category = sequelize.define(
 	"Categories",
 	{
-		Category: {
+		category: {
 			type: DataTypes.TEXT,
 			//FOREIGNKEYS
 		},

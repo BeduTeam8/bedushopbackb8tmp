@@ -1,0 +1,173 @@
+/v1/users:
+  get:
+    tags:
+      - Users
+    summary: Users list
+    description: get the list of users
+    responses:
+      200:
+        description: a welcome message
+      401:
+        description: unauthorized you need to be an admin
+      403:
+        description: forbidden
+    security:
+      - bearerAuth: []
+
+/v1/users/signUp:
+  put:
+    tags:
+      - Users
+    summary: sign up
+    description: sign up a new user
+    requestBody:
+      description: user object that will be created and added to the database
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/User'
+    responses:
+      200:
+        description: ok
+      401:
+        description: unauthorized you need to be an admin
+      403:
+        description: forbidden
+    security:
+      - bearerAuth: []
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        first_name:
+          type: string
+          example: jon
+        last_name:
+          type: string
+          example: snow
+        username:
+          type: string
+          example: kingofthenorth
+        email:
+          type: string
+          example: john@email.com
+        gender:
+          type: string
+          example: male
+        street:
+          type: string
+          example: john@email.com
+        city:
+          type: string
+          example: winterfell
+        zip_code:
+          type: string
+          example: 12345
+        country:
+          type: string
+          example: westeros
+        password:
+          type: string
+          example: 12345
+        user_type:
+          type: string
+          example: 3
+        credit_card_type:
+          type: string
+          example: mastercard
+        credit_card_number:
+          type: string
+          example: 4242424242424242
+        phone:
+          type: string
+          example: 3333333333
+    logIn:
+      type: object
+      properties:
+        username:
+          type: string
+          example: kingofthenorth
+        password:
+          type: 
+          example: 12345
+
+/v1/logIn:
+  post:
+    tags:
+      - Users
+    summary: user login
+    description: login with username and password
+    parameters:
+      - name: username
+        in: query
+        description: The user name for login
+        required: false
+        schema:
+          type: string
+      - name: password
+        in: query
+        description: The password for login in clear text
+        required: false
+        schema:
+          type: string
+    responses:
+      200:
+        description: ok
+      4001:
+        description: unauthorized you need to be an admin
+      403:
+        description: forbidden
+
+
+/v1/users/{id}:
+  get:
+    tags:
+      - Users
+    summary: Get user by id
+    description: get the user by id
+    parameters:
+      - name: user id
+        in: path
+        description: user id that needs to be fetched
+        required: true
+        schema:
+          type: integer
+          format: int64
+    responses:
+      200:
+        description: ok
+      401:
+        description: unauthorized you need to be an admin
+      403:
+        description: forbidden
+    security:
+      - bearerAuth: []
+
+
+
+/v1/users/{id}:
+  patch:
+    tags:
+      - Users
+    summary: Update user by id
+    description: update the user by id only if you are the admin or the user
+    parameters:
+      - name: id
+        in: path
+        description: user id that needs to be fetched
+        required: true
+        schema:
+          type: integer
+          format: int64
+    responses:
+      200:
+        description: ok
+      401:
+        description: unauthorized you need to be an admin
+      403:
+        description: forbidden
+    security:
+      - bearerAuth: []

@@ -6,38 +6,6 @@ const crypto = require("crypto");
 const jwt = require("jsonwebtoken");
 const secret = require("../config/secret");
 
-/**
- * @swagger
- * components:
- *   schemas:
- *     user:
- *       type: object
- *         properties:
- *           id:
- *             type: integer
- *             description: The auto-generated id of the user.
- *             example: 10
- *           first_name:
- * 	           type: string
- *             example: jon
- *           last_name:
- * 	           type: string
- *             example: snow
- *           username:
- *             type: string
- *             example: kingofthenorth
- *           email:
- *             type: string
- *             example: john@email.com
- *           password:
- *             type: string
- *             example: 12345
- *           phone:
- *             type: string
- *             example: 12345
- *
- */
-
 const User = sequelize.define(
 	"Users",
 	{

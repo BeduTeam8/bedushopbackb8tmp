@@ -69,6 +69,14 @@ const auth = {
 		}
 		next();
 	},
+	logedIn: function (req, res, next) {
+		if (!req.auth) {
+			return res.status(401).send({
+				error: "you need to login ",
+			});
+		}
+		next();
+	},
 	// guest access
 	optional: expressjwt({
 		secret: secret,
