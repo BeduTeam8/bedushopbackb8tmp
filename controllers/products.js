@@ -1,6 +1,6 @@
 //FromS5
-const { Sequelize, DataTypes, Op } = require('sequelize');
-const Product = require('../models/products');
+const { Sequelize, DataTypes, Op } = require("sequelize");
+const Product = require("../models/products");
 
 // create function
 // http://localhost:3000/products/
@@ -46,9 +46,9 @@ async function createProduct(req, res) {
 * 				Brackets{id record in table}
 */
 async function getProduct(req, res) {
-    const id = req.params.id;
-    const product = await Product.findByPk(id);
-    res.status(200).json(product);
+	const id = req.params.id;
+	const product = await Product.findByPk(id);
+	res.status(200).json(product);
 }
 
 /*No validation required
@@ -56,8 +56,8 @@ async function getProduct(req, res) {
 * 				Brackets{all records in table}
 */
 async function getProducts(req, res) {
-    const products = await Product.findAll();
-    res.status(200).json(products);    
+	const products = await Product.findAll();
+	res.status(200).json(products);
 }
 
 async function updateProduct(req, res) {
@@ -87,17 +87,15 @@ async function updateProduct(req, res) {
 * Only if a GetAll or GetById call return if user exists
 */
 async function deleteProduct(req, res) {
-    const id = req.params.id;
-    const deleted = Product.destroy(
-        {where: {id: id} }
-    );
-    res.status(200).json(deleted);
+	const id = req.params.id;
+	const deleted = Product.destroy({ where: { id: id } });
+	res.status(200).json(deleted);
 }
 
 module.exports = {
-    createProduct,
-    getProduct,
-    getProducts,
-    updateProduct,
-    deleteProduct
-}
+	createProduct,
+	getProduct,
+	getProducts,
+	updateProduct,
+	deleteProduct,
+};

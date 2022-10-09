@@ -19,7 +19,23 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(auth.optional);
 
-// ESTE ES EL CÓDIGO A AGREGAR
+// swagger js docs and swagger ui express for api documentation
+const swaggerJsDoc = require("swagger-jsdoc");
+const swaggerUi = require("swagger-ui-express");
+
+// import swagger definition from swagger.js
+const swaggerOptions = require("./config/swagger");
+
+// initialize swagger-jsdoc
+const swaggerDocs = swaggerJsDoc(swaggerOptions);
+
+// use swagger-Ui-express for app documentation endpoint
+
+app.use(
+	"/api-docs",
+	swaggerUi.serve,
+	swaggerUi.setup(swaggerDocs, { explorer: true })
+);
 
 //Configurando las rutas
 app.use("/v1", require("./routes"));

@@ -13,7 +13,14 @@ passport.use(
 		function (username, password, done) {
 			User.findOne({ where: { username: username } })
 				.then(function (user) {
-					if (!user || !user.validatePassword(password)) {
+					if (
+						!user ||
+						!User.validatePassword(
+							password,
+							user.password_hash,
+							user.password_salt
+						)
+					) {
 						return done(null, false, {
 							errors: { "username o password": "Wrong" },
 						});
