@@ -30,12 +30,14 @@ app.listen(process.env.PORT||3000, () => {
 
 try {
 	sequelize.authenticate();
-	//sequelize.sync();
-	sequelize.sync();//RESET DB remove on PROD
+	sequelize.sync();
+	//sequelize.sync({force:true});//RESET DB remove on PROD
 	console.log("Connected to DB");
 } catch (error) {
 	console.log("Unable to connect to DB:", error);
 }
+
+/*Function to test JOIN tables from sequelize
 async function getUserTypeAuth(id){
 const userTypeAuth = await User.findByPk(1, {
 	include: UserType,
@@ -45,3 +47,4 @@ const userTypeAuth = await User.findByPk(1, {
 }
   
 console.log("UserTypeAuth: ",getUserTypeAuth);
+*/
