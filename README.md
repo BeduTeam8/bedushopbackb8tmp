@@ -1,2 +1,2 @@
 # bedushopbackb8
-BeduShop Team8
+Team8
