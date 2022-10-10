@@ -123,8 +123,8 @@ router.patch("/:id", auth.Userid, updateReview);
  *  delete:
  *    tags:
  *      - Reviews
- *    summary: delete review
- *    description: delete the full list of reviews
+ *    summary: delete a review
+ *    description: delete a review
  *    parameters:
  *     - name: id
  *       in: path
@@ -140,6 +140,8 @@ router.patch("/:id", auth.Userid, updateReview);
  *        description: unauthorized you need to be an admin
  *      403:
  *        description: forbidden
+ *    security:
+ *     - bearerAuth: []
  */
 router.delete("/:id", auth.Userid, deleteReview);
 
