@@ -1,0 +1,5 @@
+[
+    {"id":1,"userType":"admin"},
+    {"id":2,"userType":"buyer"},
+    {"id":3,"userType":"seller"}
+]

@@ -1,2 +1,2 @@
-# bedushopbackb8
-Team8
+# bedushopbackb8tmp
+BeduShop Team8 Prelaunch DevSesion01
