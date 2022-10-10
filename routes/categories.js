@@ -119,7 +119,7 @@ router.patch("/:id", auth.admin, updateCategory);
 
 /**
  * @swagger
- * /v1/categories:
+ * /v1/categories/{id}:
  *  delete:
  *    tags:
  *      - Catagories
