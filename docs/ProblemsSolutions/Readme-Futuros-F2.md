@@ -31,15 +31,6 @@ module.exports = {
 };
 ```
 
-### S4
-
-Falta hacer un servicio de datos complejo APi de campos a la eleccion del usuario y contestar las preguntas teoricas. Incluir Fotos
-
-### S5 ✅
-
-Generó Cart segun Diseno del APi ![](./DisenoAPIBedushop.html)
-Aun no se bloquean servicios ni cancelan. Se tienen CRUDS completos en todas las entidades.
-
 ### S6 Vamos a S6
 
 PAra reniciar la sequencia de las TABLAS

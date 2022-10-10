@@ -68,7 +68,3 @@ Requisito:  ||  Sí lo cumple    ✅ ||  	No lo cumple  ❌
 ☐ C. Definir la conexión a la base de datos, usando sequelize.   ✅ 
 
 ☐ D. Definir consultas usando los métodos de Sequelize. 		 ✅
-
-COMO ME SALTE DIRECTO DE LOS MODELOS a LOs ControLES no hay busaquedsa con los metodos nativos de Sequelize: destroy, update, etc. Si da tiempo cambiar las imagenes de arriba de muestra por un codigo que haga eso. PEro si no ya en los controles estan las pruebass de que si sirve.
-
-Excepto para busquedas con mas de un filtro a diferentes tablas. Eso tambien se pide en sesion 4 o 5

@@ -42,9 +42,9 @@
 
 ![](./images/GETCategorybyid.png)
 
-7. Define un servicio que sólo traiga ciertos campos de la tabla, estos campos deben ser seleccionados por el cliente y pasados en la petición. ❌
+7. Define un servicio que sólo traiga ciertos campos de la tabla, estos campos deben ser seleccionados por el cliente y pasados en la petición.  ✅ 
 
-8. Prueba el servicio del inciso anterior. ❌
+8. Prueba el servicio del inciso anterior.  ✅ 
 
 9. Haz capturas de pantalla/graba tu pantalla a modo de evidencias y compártelas en el canal de Slack de tu grupo. De igual manera, consérvalas para presentar tu entregable en el Checkpoint.  ✅
 - GETCategories
@@ -58,9 +58,13 @@
 
 10. Una vez que hayas concluido tu Postwork, responde las siguientes preguntas: 
 
-- ¿Qué pasaría si seguimos definiendo todos los servicios en el archivo app.js?  ❌
+- ¿Qué pasaría si seguimos definiendo todos los servicios en el archivo app.js?  ✅
 
-- ¿Crees que representa un problema? ¿Por qué? ALL IN ONE FILE PRBLM  ❌
+ - La administración del codigo y su mantenimiento se vuelve imposible, una labor titánica para los equipos de desarrollo.
+
+- ¿Crees que representa un problema? ¿Por qué?  ✅ 
+
+    Se tendrían problemas para saber donde esta el error al tener Modelos, Controles y Rutas. Matenimiento del codigo muy costoso a largo plazo.
 
 ## 📑 CHECKLIST S4
 
