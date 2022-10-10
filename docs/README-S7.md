@@ -26,7 +26,6 @@
       ![Listado de Excel con soluciones en rutas y servicios asigados por userTypes](/DisenoAPIBedushop.xlsx)
 
  - Definir un organigrama con privilegios bien definidos para cada tipo de usuario.    ✅ 
-    HACER DIAGRAMA BASADO EN XLSX
 
 3. Cambiar las rutas de los servicios que sean necesarios para modelar este control de acceso.    ✅ 
 ## 📑 CHECKLIST S7
