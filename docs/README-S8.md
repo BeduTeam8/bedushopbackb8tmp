@@ -26,8 +26,6 @@
 
 - https://github.com/BeduTeam8/bedushopbackb8tmp Repositorio de desarrollo, puede que algunos accesos no autorizados se hayan subido por la naturaleza del desarrollo.
 
-- https://github.com/BeduTeam8/bedushopbackb8 En este repositorio se tuvo cuidado de evitar l asubida de cualquier archivo con datos confidenciales.
-
 4. Usando Heroku, en el mismo proyecto donde tienes la base de datos, deberás hacer deploy de la aplicación por medio del repositorio de GitHub.  ✅ 
 
 ![Variables de Ambiente Configuradas](./images/env_Heroku.png)
