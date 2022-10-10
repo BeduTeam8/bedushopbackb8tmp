@@ -14,4 +14,4 @@ Dentro del folder Docs, encontrará varios  READMe-Sx docs qu ele permitiran seg
 
 
 
-- ![QR Code](./docs/QRBeduShopBackB8.png)
+- <img src="https://raw.githubusercontent.com/BeduTeam8/bedushopbackb8tmp/main/docs/QRBeduShopBackB8.png" widgth="350" height="350"/>
