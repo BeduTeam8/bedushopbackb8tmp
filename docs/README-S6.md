@@ -33,6 +33,8 @@ FOTO DEL PACKAGE.JSON
 
     - Hasheado con el Salt del password del usuario, de manera que si tenemos que resetear el password se debe solicitar renovar su tarjeta de credito.
 
+    ![Credit_Card](./images/Credit_card.png)
+
 4. Utiliza la biblioteca crypto para proteger los datos sensibles de la base de datos.  ✅ 
 
 ## 📑 CHECKLIST S6
